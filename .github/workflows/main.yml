@@ -12,6 +12,4 @@ jobs:
       - name: ls
         run: ls
       - name: forge
-        run: forge test --root /github/workspace/
-
-# docker run -v $PWD:/app foundry "forge test --root /app --watch"
+        run: forge test -vvvv
