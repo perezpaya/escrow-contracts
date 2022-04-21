@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: ls
-        run: ls
+        run: cd /github/workspace/ && ls
       - name: forge
-        run: forge -h
+        run: forge test --root /github/workspace/
 
 # docker run -v $PWD:/app foundry "forge test --root /app --watch"
