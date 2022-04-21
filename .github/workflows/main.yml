@@ -9,7 +9,7 @@ jobs:
       image: ghcr.io/foundry-rs/foundry:latest
     steps:
       - uses: actions/checkout@v3
-      - name: install packages
-        run: apk add git && git submodule update --recursive
+        with:
+          submodules: recursive
       - name: forge
         run: forge test -vvvv
