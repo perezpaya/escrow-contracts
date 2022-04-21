@@ -8,8 +8,9 @@ jobs:
     container:
       image: ghcr.io/foundry-rs/foundry:latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
-          submodules: recursive
+          ssh-key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILi/AUx0JYc6lyRssgSRKmbnEOH9w2uRxm07fxH4uwjT'
+          submodules: true
       - name: forge
         run: forge test -vvvv
