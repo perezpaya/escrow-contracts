@@ -1,7 +1,0 @@
-name: Tests
-
-jobs:
-  test:
-    container:
-      image: ghcr.io/foundry-rs/foundry:latest foundry:latest
-      run: forge -h
