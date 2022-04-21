@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: install packages
-        run: git submodule update --recursive
+        run: apk add git && git submodule update --recursive
       - name: forge
         run: forge test -vvvv
